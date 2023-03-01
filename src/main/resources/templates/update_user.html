@@ -15,11 +15,22 @@
 
     <!-- Add hidden form field to handle update -->
     <input type="hidden" th:field="*{id}" />
-    <input type="text" th:field="*{user_name}" class="form-control mb-4 col-4" placeholder="User name">
+    <input type="text" th:field="*{userName}" class="form-control mb-4 col-4" placeholder="User name">
     <input type="text" th:field="*{userLastName}" class="form-control mb-4 col-4" placeholder="User Last Name">
     <input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Email">
+
+
+
     <button type="submit" class="btn btn-info col-2"> Update User</button>
+
+    <div> Count of symbols in name  </div><div th:text="${charsofName.toString()}" >   </div>
+
+
+    <div> Count of words in name  </div><div th:text="${wordsofname.toString()}" >   </div>
   </form>
+
+
+
 
   <hr>
 
